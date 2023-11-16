@@ -1,0 +1,123 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.main-div {
+    background: black;
+    text-align: -webkit-center;
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.header {
+    background: #e6e6e6;
+    max-width: 500px;
+    width: 100%;
+    flex: 1;
+}
+
+.header h2 {
+    font-size: 2rem;
+}
+
+.main {
+    text-align: center;
+    width: 380px;
+    background: white;
+    position: relative;
+    top: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    overflow: auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+input {
+    width: 70%;
+    height: 25px;
+}
+
+.add {
+    height: 30px;
+    width: 20%;
+    background: red;
+    color: white;
+    border-radius: 3px;
+    border: none;
+    cursor: pointer;
+}
+
+.edit,
+.delete {
+    height: 30px;
+    width: 20%;
+    background: red;
+    color: white;
+    border-radius: 3px;
+    border: none;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.edit:hover {
+    background: rgb(92, 1, 1);
+} 
+.delete:hover {
+    background: rgb(92, 1, 1);;
+}
+
+#btn:hover {
+    background: rgb(92, 1, 1);;
+}
+
+.list-item {
+    margin-bottom: 10px;
+    list-style-type: none;
+}
+
+.list-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.list-item input[type="checkbox"] {
+    margin-left: 15px;
+    /* order: 1; */
+    width: 20px;
+}
+
+.list-item span {
+    flex: 1;
+    text-align: left;
+    order: 2;
+    margin-left: 5px;
+}
+
+.list-item button {
+    margin-left: 10px;
+    order: 3;  
+}
+
+.list-item .save {
+    margin-right: 10px;
+    height: 30px;
+    width: 20%;
+    background: green;
+    color: white;
+    border-radius: 3px;
+    border: none;
+    cursor: pointer;
+}
+
+.list-item .edit {
+    margin-left: 0;
+}
+
+#listitem {
+    padding: 0;
+}
