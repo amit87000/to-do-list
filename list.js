@@ -201,17 +201,18 @@ btnValue.addEventListener("click", function () {
 
         const saveButton = document.createElement("button");
         saveButton.className = "save";
-        saveButton.textContent = "Save"; 
+        saveButton.textContent = "Save";
         saveButton.addEventListener("click", function () {
             taskText = editInput.value;
             textSpan.textContent = taskText;
             textSpan.style.display = "inline";
             listItem.removeChild(editInput);
-            listItem.removeChild(saveButton );
-
+            listItem.removeChild(saveButton);
         });
 
         listItem.insertBefore(saveButton, editButton);
+        document.getElementById("count").innerHTML = taskArray.length;
+
     });
 
     deleteButton.addEventListener("click", function () {
@@ -221,11 +222,26 @@ btnValue.addEventListener("click", function () {
         }
         list.removeChild(listItem);
         console.log(taskArray);
+        if(taskArray.length==0){
+            document.getElementById("check").innerHTML = "";
+        }
+        document.getElementById("count").innerHTML = taskArray.length;
     });
 
     list.appendChild(listItem);
     taskInput.value = "";
-    console.log(taskArray);
+    console.log(taskArray.length);
+
+    if(taskArray.length == 1){
+    const bottomCheckbox = document.createElement("input");
+    bottomCheckbox.type = "checkbox";
+    document.getElementById("check").appendChild(bottomCheckbox);
+    }
+    if (taskArray.length >= 1) {  
+        console.log("call task update")     
+        document.getElementById("count").innerHTML = taskArray.length;
+    }
 });
+
 
 
